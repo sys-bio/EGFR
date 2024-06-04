@@ -10,11 +10,11 @@ You only need to pip install the pybionetfit package
 pybionetfit requires Python<=3.5
 `pip install pybnf`
 
-# ENVIRONMENT
+## ENVIRONMENT
 
 packages in environment at /home/michael/anaconda3/envs/egfr:
 
-`Name                    Version                   Build  Channel
+Name                    Version                   Build  Channel
 _libgcc_mutex             0.1                        main  
 _openmp_mutex             5.1                       1_gnu  
 bcrypt                    4.1.3                    pypi_0    pypi
@@ -67,7 +67,7 @@ urllib3                   2.2.1                    pypi_0    pypi
 wheel                     0.43.0          py310h06a4308_0  
 xz                        5.4.6                h5eee18b_1  
 zict                      3.0.0                    pypi_0    pypi
-zlib                      1.2.13               h5eee18b_1`
+zlib                      1.2.13               h5eee18b_1
 
 # RUN PYBIONETFIT
 make sure you cd into the correct directory
