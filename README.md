@@ -21,12 +21,12 @@ Install tellurium for analysis
 ### RUN PYBIONETFIT
 make sure you cd into the correct directory
 
-`pybnf -c EGFR_x_de.conf> x = EGFR, EGFR_no_Shp`
+`pybnf -c EGFR_pybionetfit.conf`
 
 ### INSERT PARAMETERS
 
-`python insert_x_params.py> x = EGFR, EGFR_no_Shp`
+`python insert_x_params.py <x = EGFR, EGFR_no_Shp>`
 
 ### PLOT RESULTS
 
-`python run_EGFR_x.py> x = EGFR, EGFR_no_Shp`
+`python run_EGFR_x.py <x = EGFR, EGFR_no_Shp>`
