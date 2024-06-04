@@ -10,6 +10,7 @@ https://docs.anaconda.com/free/anaconda/install/index.html
 
 You only need to pip install the pybionetfit package
 pybionetfit requires Python<=3.5
+
 `pip install pybnf`
 
 ### ENVIRONMENT
