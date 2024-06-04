@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
+  <model metaid="EGFR_combined" id="EGFR_combined" substanceUnits="substance" timeUnits="time_unit">
+    <listOfUnitDefinitions>
+      <unitDefinition id="nM">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+          <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="substance" name="nmole">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="time_unit" name="s">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_nM">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+          <unit kind="mole" exponent="-1" scale="-9" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_sec" name="s-1">
+        <listOfUnits>
+          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="nM_per_s" name="nM/s">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+          <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_nMs" name="nM-1 s-1">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+          <unit kind="mole" exponent="-1" scale="-9" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cell" spatialDimensions="3" size="1" constant="true"/>
+      <compartment id="extra" name="extracellular space" spatialDimensions="3" size="5000" constant="true"/>
+      <compartment id="intra" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="Lig" compartment="extra" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Egfr" compartment="cell" initialAmount="135" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="iEgfr" compartment="intra" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Egfr_Lig" compartment="cell" initialAmount="0.97" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="iEgfr_Lig" compartment="intra" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pEgfr_Lig" compartment="cell" initialAmount="0.085" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ipEgfr_Lig" compartment="intra" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Shp2" compartment="cell" initialAmount="27.5" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pShp2" compartment="cell" initialAmount="0.27" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aR_Shp2" compartment="cell" initialAmount="0.23" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aR_pShp2" compartment="cell" initialAmount="0.012" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Garem" compartment="cell" initialAmount="1.7" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2" compartment="cell" initialAmount="39" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2_Garem" compartment="cell" initialAmount="2" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2_pGarem" compartment="cell" initialAmount="0.1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aR_Grb2_Garem" compartment="cell" initialAmount="0.163" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aR_Grb2_pGarem" compartment="cell" initialAmount="0.001" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2_pGarem_pShp2" compartment="cell" initialAmount="0.002" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Shc1" compartment="cell" initialAmount="26.7" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aR_Shc1" compartment="cell" initialAmount="0.046" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aR_pShc1" compartment="cell" initialAmount="0.026" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pShc1" compartment="cell" initialAmount="0.31" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Gab1" compartment="cell" initialAmount="2.1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2_Gab1" compartment="cell" initialAmount="2.7" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2_pGab1" compartment="cell" initialAmount="0.08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aR_Grb2_Gab1" compartment="cell" initialAmount="0.08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aR_Grb2_pGab1" compartment="cell" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2_pGab1_pShp2" compartment="cell" initialAmount="0.002" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="SOS1" compartment="cell" initialAmount="0.13" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Grb2_SOS1" compartment="cell" initialAmount="3.1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Ad1_Grb2_SOS1" compartment="cell" initialAmount="0.007" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="iAd1_Grb2_SOS1" compartment="cell" initialAmount="0.002" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="iGrb2_pGarem_pShp2" compartment="cell" initialAmount="0.002" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Ad2_Grb2_SOS1" compartment="cell" initialAmount="0.008" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="iAd2_Grb2_SOS1" compartment="cell" initialAmount="0.002" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="iGrb2_pGab1_pShp2" compartment="cell" initialAmount="0.002" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Ad3_Grb2_SOS1" compartment="cell" initialAmount="0.31" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="iAd3_Grb2_SOS1" compartment="cell" initialAmount="0.08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ipShc1" compartment="cell" initialAmount="0.08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Ras" compartment="cell" initialAmount="98" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aRas1" compartment="cell" initialAmount="0.08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aRas2" compartment="cell" initialAmount="0.08" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aRas3" compartment="cell" initialAmount="0.67" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Rasa1" compartment="cell" initialAmount="98" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pEGFRtot" compartment="cell" initialAmount="0.643" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aRtot" compartment="cell" initialAmount="0.085" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pGAREMtot" compartment="cell" initialAmount="0.114" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pGAB1tot" compartment="cell" initialAmount="0.094" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pSHC1tot" compartment="cell" initialAmount="0.806" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aRAStot" compartment="cell" initialAmount="0.83" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="pShp2tot" compartment="cell" initialAmount="0.309" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="total_SOS" compartment="cell" initialAmount="3.639" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="Vr" value="0.176" constant="true"/>
+      <parameter id="kt" value="0.0013" constant="true"/>
+      <parameter id="kx" value="1" constant="true"/>
+      <parameter id="kf" value="0.0159" constant="true"/>
+      <parameter id="kr" value="0.00685" constant="true"/>
+      <parameter id="ke" value="0.0037" constant="true"/>
+      <parameter id="kh" value="0.00056" constant="true"/>
+      <parameter id="kp1" value="0.0062851032585136" constant="true"/>
+      <parameter id="k_p1" value="0.07" constant="true"/>
+      <parameter id="k7" value="0.11" constant="true"/>
+      <parameter id="k_7" value="1.07" constant="true"/>
+      <parameter id="kp5" value="0.0382446238008276" constant="true"/>
+      <parameter id="k_p5" value="0.0461" constant="true"/>
+      <parameter id="k1" value="0.0005" constant="true"/>
+      <parameter id="k_1" value="0.016" constant="true"/>
+      <parameter id="k2" value="2.06912297918696" constant="true"/>
+      <parameter id="k_2" value="1.8" constant="true"/>
+      <parameter id="kp2" value="0.0062805679891692" constant="true"/>
+      <parameter id="k_p2" value="0.02" constant="true"/>
+      <parameter id="k3" value="0.5169929196675" constant="true"/>
+      <parameter id="k_3" value="1.5" constant="true"/>
+      <parameter id="k4" value="0.001" constant="true"/>
+      <parameter id="k_4" value="0.03" constant="true"/>
+      <parameter id="k5" value="0.670326390679821" constant="true"/>
+      <parameter id="k_5" value="1.46" constant="true"/>
+      <parameter id="kp3" value="0.0038238812662858" constant="true"/>
+      <parameter id="k_p3" value="0.0072" constant="true"/>
+      <parameter id="k6" value="0.120934869858997" constant="true"/>
+      <parameter id="k_6" value="1.07" constant="true"/>
+      <parameter id="kp4" value="0.0577020462450724" constant="true"/>
+      <parameter id="k_p4" value="0.09" constant="true"/>
+      <parameter id="k8" value="9e-05" constant="true"/>
+      <parameter id="k_8" value="0.00014" constant="true"/>
+      <parameter id="k11" value="0.171498972526627" constant="true"/>
+      <parameter id="k_11" value="0.0090676970896362" constant="true"/>
+      <parameter id="kr1a" value="0.0088853594647147" constant="true"/>
+      <parameter id="kr2a" value="0.0234672605582621" constant="true"/>
+      <parameter id="k12" value="0.0774738610981507" constant="true"/>
+      <parameter id="k_12" value="0.0064861529792559" constant="true"/>
+      <parameter id="kr1b" value="0.0110833809116312" constant="true"/>
+      <parameter id="kr2b" value="0.0198462175548282" constant="true"/>
+      <parameter id="k13" value="0.02" constant="true"/>
+      <parameter id="k_13" value="0.0495759816582803" constant="true"/>
+      <parameter id="kr1c" value="0.009555245566438" constant="true"/>
+      <parameter id="kr2c" value="0.0114585225222379" constant="true"/>
+      <parameter id="k14" value="0.197348617531651" constant="true"/>
+      <parameter id="k15" value="0.0104323266524506" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule variable="pEGFRtot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> pEgfr_Lig </ci>
+            <ci> ipEgfr_Lig </ci>
+            <ci> aR_Grb2_Garem </ci>
+            <ci> aR_Grb2_pGarem </ci>
+            <ci> aR_Grb2_Gab1 </ci>
+            <ci> aR_Grb2_pGab1 </ci>
+            <ci> aR_Shp2 </ci>
+            <ci> aR_pShp2 </ci>
+            <ci> aR_Shc1 </ci>
+            <ci> aR_pShc1 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="aRtot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> pEgfr_Lig </ci>
+            <ci> ipEgfr_Lig </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="pGAREMtot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> aR_Grb2_pGarem </ci>
+            <ci> Grb2_pGarem </ci>
+            <ci> Grb2_pGarem_pShp2 </ci>
+            <ci> Ad1_Grb2_SOS1 </ci>
+            <ci> iAd1_Grb2_SOS1 </ci>
+            <ci> iGrb2_pGarem_pShp2 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="pGAB1tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> aR_Grb2_pGab1 </ci>
+            <ci> Grb2_pGab1 </ci>
+            <ci> Grb2_pGab1_pShp2 </ci>
+            <ci> Ad2_Grb2_SOS1 </ci>
+            <ci> iAd2_Grb2_SOS1 </ci>
+            <ci> iGrb2_pGab1_pShp2 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="pSHC1tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> aR_pShc1 </ci>
+            <ci> pShc1 </ci>
+            <ci> Ad3_Grb2_SOS1 </ci>
+            <ci> iAd3_Grb2_SOS1 </ci>
+            <ci> ipShc1 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="aRAStot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> aRas1 </ci>
+            <ci> aRas2 </ci>
+            <ci> aRas3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="pShp2tot">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> aR_pShp2 </ci>
+            <ci> pShp2 </ci>
+            <ci> Grb2_pGarem_pShp2 </ci>
+            <ci> Ad1_Grb2_SOS1 </ci>
+            <ci> iAd1_Grb2_SOS1 </ci>
+            <ci> Grb2_pGab1_pShp2 </ci>
+            <ci> Ad2_Grb2_SOS1 </ci>
+            <ci> iAd2_Grb2_SOS1 </ci>
+            <ci> iGrb2_pGarem_pShp2 </ci>
+            <ci> iGrb2_pGab1_pShp2 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="total_SOS">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> SOS1 </ci>
+            <ci> Grb2_SOS1 </ci>
+            <ci> Ad1_Grb2_SOS1 </ci>
+            <ci> iAd1_Grb2_SOS1 </ci>
+            <ci> Ad2_Grb2_SOS1 </ci>
+            <ci> iAd2_Grb2_SOS1 </ci>
+            <ci> Ad3_Grb2_SOS1 </ci>
+            <ci> iAd3_Grb2_SOS1 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction id="J1" reversible="false">
+        <listOfProducts>
+          <speciesReference species="Egfr" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> Vr </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J2" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Egfr" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="iEgfr" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kt </ci>
+              <ci> Egfr </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J3" reversible="false">
+        <listOfReactants>
+          <speciesReference species="iEgfr" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kx </ci>
+              <ci> iEgfr </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J4" reversible="true">
+        <listOfReactants>
+          <speciesReference species="Egfr" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Egfr_Lig" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="Lig"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kf </ci>
+                <ci> Egfr </ci>
+                <ci> Lig </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kr </ci>
+                <ci> Egfr_Lig </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J5" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Egfr_Lig" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="iEgfr_Lig" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ke </ci>
+              <ci> Egfr_Lig </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J6" reversible="false">
+        <listOfReactants>
+          <speciesReference species="iEgfr_Lig" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kh </ci>
+              <ci> iEgfr_Lig </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J7" reversible="true">
+        <listOfReactants>
+          <speciesReference species="Egfr_Lig" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kp1 </ci>
+                <ci> Egfr_Lig </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_p1 </ci>
+                <ci> pEgfr_Lig </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J8" reversible="false">
+        <listOfReactants>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ipEgfr_Lig" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ke </ci>
+              <ci> pEgfr_Lig </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J9" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ipEgfr_Lig" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kh </ci>
+              <ci> ipEgfr_Lig </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J10" reversible="true">
+        <listOfReactants>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+          <speciesReference species="Shp2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="aR_Shp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k7 </ci>
+                <ci> pEgfr_Lig </ci>
+                <ci> Shp2 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_7 </ci>
+                <ci> aR_Shp2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J11" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aR_Shp2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="aR_pShp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kp5 </ci>
+              <ci> aR_Shp2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J12" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aR_pShp2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+          <speciesReference species="pShp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_7 </ci>
+              <ci> aR_pShp2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J13" reversible="false">
+        <listOfReactants>
+          <speciesReference species="pShp2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Shp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_p5 </ci>
+              <ci> pShp2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J14" reversible="true">
+        <listOfReactants>
+          <speciesReference species="Garem" stoichiometry="1" constant="true"/>
+          <speciesReference species="Grb2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_Garem" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k1 </ci>
+                <ci> Garem </ci>
+                <ci> Grb2 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_1 </ci>
+                <ci> Grb2_Garem </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J15" reversible="true">
+        <listOfReactants>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+          <speciesReference species="Grb2_Garem" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="aR_Grb2_Garem" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k2 </ci>
+                <ci> pEgfr_Lig </ci>
+                <ci> Grb2_Garem </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_2 </ci>
+                <ci> aR_Grb2_Garem </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J16" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aR_Grb2_Garem" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="aR_Grb2_pGarem" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kp2 </ci>
+              <ci> aR_Grb2_Garem </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J17" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aR_Grb2_pGarem" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+          <speciesReference species="Grb2_pGarem" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_2 </ci>
+              <ci> aR_Grb2_pGarem </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J18" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Grb2_pGarem" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_Garem" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_p2 </ci>
+              <ci> Grb2_pGarem </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J19" reversible="true">
+        <listOfReactants>
+          <speciesReference species="Grb2_pGarem" stoichiometry="1" constant="true"/>
+          <speciesReference species="pShp2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_pGarem_pShp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k3 </ci>
+                <ci> Grb2_pGarem </ci>
+                <ci> pShp2 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_3 </ci>
+                <ci> Grb2_pGarem_pShp2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J20" reversible="true">
+        <listOfReactants>
+          <speciesReference species="Gab1" stoichiometry="1" constant="true"/>
+          <speciesReference species="Grb2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_Gab1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k4 </ci>
+                <ci> Gab1 </ci>
+                <ci> Grb2 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_4 </ci>
+                <ci> Grb2_Gab1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J21" reversible="true">
+        <listOfReactants>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+          <speciesReference species="Grb2_Gab1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="aR_Grb2_Gab1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k5 </ci>
+                <ci> pEgfr_Lig </ci>
+                <ci> Grb2_Gab1 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_5 </ci>
+                <ci> aR_Grb2_Gab1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J22" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aR_Grb2_Gab1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="aR_Grb2_pGab1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kp3 </ci>
+              <ci> aR_Grb2_Gab1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J23" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aR_Grb2_pGab1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+          <speciesReference species="Grb2_pGab1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_5 </ci>
+              <ci> aR_Grb2_pGab1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J24" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Grb2_pGab1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_Gab1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_p3 </ci>
+              <ci> Grb2_pGab1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J25" reversible="true">
+        <listOfReactants>
+          <speciesReference species="Grb2_pGab1" stoichiometry="1" constant="true"/>
+          <speciesReference species="pShp2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_pGab1_pShp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k3 </ci>
+                <ci> Grb2_pGab1 </ci>
+                <ci> pShp2 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_3 </ci>
+                <ci> Grb2_pGab1_pShp2 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J26" reversible="true">
+        <listOfReactants>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+          <speciesReference species="Shc1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="aR_Shc1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k6 </ci>
+                <ci> pEgfr_Lig </ci>
+                <ci> Shc1 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_6 </ci>
+                <ci> aR_Shc1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J27" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aR_Shc1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="aR_pShc1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kp4 </ci>
+              <ci> aR_Shc1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J28" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aR_pShc1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pEgfr_Lig" stoichiometry="1" constant="true"/>
+          <speciesReference species="pShc1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_6 </ci>
+              <ci> aR_pShc1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J29" reversible="false">
+        <listOfReactants>
+          <speciesReference species="pShc1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Shc1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_p4 </ci>
+              <ci> pShc1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J30" reversible="true">
+        <listOfReactants>
+          <speciesReference species="Grb2" stoichiometry="1" constant="true"/>
+          <speciesReference species="SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k8 </ci>
+                <ci> Grb2 </ci>
+                <ci> SOS1 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_8 </ci>
+                <ci> Grb2_SOS1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J31" reversible="true">
+        <listOfReactants>
+          <speciesReference species="Grb2_pGarem_pShp2" stoichiometry="1" constant="true"/>
+          <speciesReference species="Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ad1_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k11 </ci>
+                <ci> Grb2_pGarem_pShp2 </ci>
+                <ci> Grb2_SOS1 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_11 </ci>
+                <ci> Ad1_Grb2_SOS1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J32" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Ad1_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="iAd1_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ke </ci>
+              <ci> Ad1_Grb2_SOS1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J33" reversible="false">
+        <listOfReactants>
+          <speciesReference species="iAd1_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_SOS1" stoichiometry="1" constant="true"/>
+          <speciesReference species="iGrb2_pGarem_pShp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kr1a </ci>
+              <ci> iAd1_Grb2_SOS1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J34" reversible="false">
+        <listOfReactants>
+          <speciesReference species="iGrb2_pGarem_pShp2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_pGarem" stoichiometry="1" constant="true"/>
+          <speciesReference species="pShp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kr2a </ci>
+              <ci> iGrb2_pGarem_pShp2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J35" reversible="true">
+        <listOfReactants>
+          <speciesReference species="Grb2_pGab1_pShp2" stoichiometry="1" constant="true"/>
+          <speciesReference species="Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ad2_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k12 </ci>
+                <ci> Grb2_pGab1_pShp2 </ci>
+                <ci> Grb2_SOS1 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_12 </ci>
+                <ci> Ad2_Grb2_SOS1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J36" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Ad2_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="iAd2_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ke </ci>
+              <ci> Ad2_Grb2_SOS1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J37" reversible="false">
+        <listOfReactants>
+          <speciesReference species="iAd2_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_SOS1" stoichiometry="1" constant="true"/>
+          <speciesReference species="iGrb2_pGab1_pShp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kr1b </ci>
+              <ci> iAd2_Grb2_SOS1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J38" reversible="false">
+        <listOfReactants>
+          <speciesReference species="iGrb2_pGab1_pShp2" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_pGab1" stoichiometry="1" constant="true"/>
+          <speciesReference species="pShp2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kr2b </ci>
+              <ci> iGrb2_pGab1_pShp2 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J39" reversible="true">
+        <listOfReactants>
+          <speciesReference species="pShc1" stoichiometry="1" constant="true"/>
+          <speciesReference species="Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ad3_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k13 </ci>
+                <ci> pShc1 </ci>
+                <ci> Grb2_SOS1 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k_13 </ci>
+                <ci> Ad3_Grb2_SOS1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J40" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Ad3_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="iAd3_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ke </ci>
+              <ci> Ad3_Grb2_SOS1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J41" reversible="false">
+        <listOfReactants>
+          <speciesReference species="iAd3_Grb2_SOS1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Grb2_SOS1" stoichiometry="1" constant="true"/>
+          <speciesReference species="ipShc1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kr1c </ci>
+              <ci> iAd3_Grb2_SOS1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J42" reversible="false">
+        <listOfReactants>
+          <speciesReference species="ipShc1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="pShc1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kr2c </ci>
+              <ci> ipShc1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J44" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Ad1_Grb2_SOS1" stoichiometry="1" constant="true"/>
+          <speciesReference species="Ras" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ad1_Grb2_SOS1" stoichiometry="1" constant="true"/>
+          <speciesReference species="aRas1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k14 </ci>
+              <ci> Ad1_Grb2_SOS1 </ci>
+              <ci> Ras </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J45" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Ad2_Grb2_SOS1" stoichiometry="1" constant="true"/>
+          <speciesReference species="Ras" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ad2_Grb2_SOS1" stoichiometry="1" constant="true"/>
+          <speciesReference species="aRas2" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k14 </ci>
+              <ci> Ad2_Grb2_SOS1 </ci>
+              <ci> Ras </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J46" reversible="false">
+        <listOfReactants>
+          <speciesReference species="Ad3_Grb2_SOS1" stoichiometry="1" constant="true"/>
+          <speciesReference species="Ras" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ad3_Grb2_SOS1" stoichiometry="1" constant="true"/>
+          <speciesReference species="aRas3" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k14 </ci>
+              <ci> Ad3_Grb2_SOS1 </ci>
+              <ci> Ras </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J47" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aRas1" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rasa1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ras" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rasa1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k15 </ci>
+              <ci> aRas1 </ci>
+              <ci> Rasa1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J48" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aRas2" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rasa1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ras" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rasa1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k15 </ci>
+              <ci> aRas2 </ci>
+              <ci> Rasa1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="J49" reversible="false">
+        <listOfReactants>
+          <speciesReference species="aRas3" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rasa1" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Ras" stoichiometry="1" constant="true"/>
+          <speciesReference species="Rasa1" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k15 </ci>
+              <ci> aRas3 </ci>
+              <ci> Rasa1 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
