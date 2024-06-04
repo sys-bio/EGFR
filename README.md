@@ -3,7 +3,9 @@
 
 if you use conda
 https://docs.anaconda.com/free/anaconda/install/index.html
+
 `conda create -n egfr python==3.10.12`
+
 `conda activate egfr`
 
 You only need to pip install the pybionetfit package
