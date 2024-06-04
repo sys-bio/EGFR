@@ -17,8 +17,7 @@ pybionetfit requires Python<=3.5
 
 packages in environment at /home/michael/anaconda3/envs/egfr:
 
-Name                    Version                   Build  Channel
-
+Name                    Version                   Build  Channel 
 _libgcc_mutex             0.1                        main  
 _openmp_mutex             5.1                       1_gnu  
 bcrypt                    4.1.3                    pypi_0    pypi
