@@ -9,6 +9,7 @@ https://docs.anaconda.com/free/anaconda/install/index.html
 `conda activate egfr`
 
 You only need to pip install the pybionetfit package for fitting
+
 pybionetfit requires Python<=3.5
 
 `pip install pybnf`
