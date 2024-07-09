@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d8a47f5-6013-4aec-99c9-290042770252" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/.idea/EGFR.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR2.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR2_no_Shp.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR2_no_Shp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR2_no_Shp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR2_pybionetfit.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR_new.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR_new_no_Shp.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EGFR_new_no_Shp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR2_pybionetfit.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_gen379ind176.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_gen379ind1761.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_gen379ind1762.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_gen379ind1763.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_gen379ind1764.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_gen379ind1765.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_gen379ind1766.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_gen379ind1767.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_gen379ind1768.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_no_Shp_gen379ind176.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_no_Shp_gen379ind1761.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_no_Shp_gen379ind1762.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_no_Shp_gen379ind1763.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_no_Shp_gen379ind1764.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_no_Shp_gen379ind1765.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_no_Shp_gen379ind1766.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_no_Shp_gen379ind1767.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/EGFR_new_no_Shp_gen379ind1768.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_11.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_13.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_14.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_15.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_16.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_17.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_18.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_20.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_21.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_22.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_23.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_24.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_backup.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results/sorted_params_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_gen497ind32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_gen497ind321.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_gen497ind322.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_gen497ind323.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_gen497ind324.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_gen497ind325.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_gen497ind326.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_gen497ind327.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_gen497ind328.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_no_Shp_gen497ind32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_no_Shp_gen497ind321.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_no_Shp_gen497ind322.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_no_Shp_gen497ind323.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_no_Shp_gen497ind324.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_no_Shp_gen497ind325.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_no_Shp_gen497ind326.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_no_Shp_gen497ind327.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_no_Shp_gen497ind328.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/EGFR2_pybionetfit.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_11.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_13.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_14.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_15.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_16.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_17.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_18.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_20.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_21.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_22.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_23.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_24.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_backup.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_end.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Results0/sorted_params_final.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Updated model 6-18-24.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a_new_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a_new_ras_data.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alg_finished.bp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b_new_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/b_new_ras_data.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bnf_20240705-174219.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bnf_20240705-174324.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bnf_20240707-200112.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bnf_20240707-200242.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/convert_modules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/egfr1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/egfr2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/no_shp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_1.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_2.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_3.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_4.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_5.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_6.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_7.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_8.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_no_Shp_.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_no_Shp_1.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_no_Shp_2.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_no_Shp_3.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_no_Shp_4.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_no_Shp_5.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_no_Shp_6.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_no_Shp_7.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/EGFR_no_Shp_8.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/run_EGFR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/run_EGFR_no_Shp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_1.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_2.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_3.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_4.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_5.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_6.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_7.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_8.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_no_Shp_.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_no_Shp_1.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_no_Shp_2.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_no_Shp_3.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_no_Shp_4.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_no_Shp_5.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_no_Shp_6.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_no_Shp_7.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_2/EGFR_no_Shp_8.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_1.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_2.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_3.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_4.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_5.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_6.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_7.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_8.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_no_Shp_.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_no_Shp_1.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_no_Shp_2.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_no_Shp_3.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_no_Shp_4.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_no_Shp_5.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_no_Shp_6.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_no_Shp_7.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data_3/EGFR_no_Shp_8.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parameters" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/EGFR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/EGFR_0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/EGFR_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_1.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_2.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_3.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_4.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_5.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_6.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_7.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_8.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8a_de.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_1.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_2.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_3.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_4.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_5.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_6.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_7.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_8.exp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8b_de.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_8c_de.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/EGFR_pybionetfit.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/convert_modules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/egfr.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/egfr0.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/egfr1.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/egfr2.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/experimental_conditions.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/experimental_conditions_a.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/experimental_conditions_b.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/measurement_data.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/measurement_data_a.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/measurement_data_b.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/observables.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/observables_a.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/observables_b.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/parameters.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/visualize_a.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr/visualize_b.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/EGFR_module.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/EGFR_module.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/EGFR_sequential_fit_egfr.ant" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/EGFR_sequential_fit_egfr.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/convert_modules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/egfr_module.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/experimental_conditions.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/experimental_conditions_0.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/insert_params.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/measurement_data.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/measurement_data_0.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/observables.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/egfr_0/parameters.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/insert_8a_params.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/insert_8b_params.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyPESTO/doc/example/rr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/with_shp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_1.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_1.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_2.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_2.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_3.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_3.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_4.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_4.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_5.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_5.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_6.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_6.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_7.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_7.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_8.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_8.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_no_Shp_.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_no_Shp_.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_no_Shp_1.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_no_Shp_1.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_no_Shp_2.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_no_Shp_2.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_no_Shp_3.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_no_Shp_3.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_no_Shp_4.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_no_Shp_4.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_no_Shp_5.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_no_Shp_5.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_no_Shp_6.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_no_Shp_6.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_no_Shp_7.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_no_Shp_7.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EGFR_no_Shp_8.exp" beforeDir="false" afterPath="$PROJECT_DIR$/EGFR_no_Shp_8.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insert_EGFR_no_Shp_params.py" beforeDir="false" afterPath="$PROJECT_DIR$/insert_EGFR_no_Shp_params.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insert_EGFR_params.py" beforeDir="false" afterPath="$PROJECT_DIR$/insert_EGFR_params.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyPESTO/doc/example/conversion_reaction/conversion_reaction.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pyPESTO/doc/example/conversion_reaction/conversion_reaction.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyPESTO/doc/example/conversion_reaction/create.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyPESTO/doc/example/conversion_reaction/create.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyPESTO/doc/example/conversion_reaction/multiple_conditions/conversion_reaction.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pyPESTO/doc/example/conversion_reaction/multiple_conditions/conversion_reaction.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyPESTO/doc/example/roadrunner.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pyPESTO/doc/example/roadrunner.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyPESTO/doc/example/store.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pyPESTO/doc/example/store.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_EGFR.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_EGFR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_EGFR_no_Shp.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_EGFR_no_Shp.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2hOKedsB63oKKFWiAsXhzRU0kkO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/michael/PycharmProjects/EGFR&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/old_data_3" />
+      <recent name="$PROJECT_DIR$/old_data_2" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/old_data" />
+      <recent name="$PROJECT_DIR$/Results" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.run_EGFR">
+    <configuration name="convert_modules" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="EGFR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/convert_modules.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="insert_EGFR_no_Shp_params" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="EGFR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/insert_EGFR_no_Shp_params.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="insert_EGFR_params" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="EGFR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/insert_EGFR_params.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="EGFR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_EGFR" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="EGFR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_EGFR.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_EGFR_no_Shp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="EGFR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_EGFR_no_Shp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.run_EGFR" />
+        <item itemvalue="Python.run_EGFR_no_Shp" />
+        <item itemvalue="Python.insert_EGFR_params" />
+        <item itemvalue="Python.insert_EGFR_no_Shp_params" />
+        <item itemvalue="Python.convert_modules" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d8a47f5-6013-4aec-99c9-290042770252" name="Changes" comment="" />
+      <created>1717459780194</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717459780194</updated>
+      <workItem from="1717459781410" duration="4096000" />
+      <workItem from="1717535444889" duration="204000" />
+      <workItem from="1718230306040" duration="632000" />
+      <workItem from="1718758090824" duration="6675000" />
+      <workItem from="1718905001109" duration="10536000" />
+      <workItem from="1719424835434" duration="11531000" />
+      <workItem from="1719525893074" duration="10036000" />
+      <workItem from="1720026537836" duration="396000" />
+      <workItem from="1720058076302" duration="2830000" />
+      <workItem from="1720081950995" duration="61000" />
+      <workItem from="1720161738204" duration="608000" />
+      <workItem from="1720188956032" duration="1922000" />
+      <workItem from="1720222641472" duration="215000" />
+      <workItem from="1720226398016" duration="945000" />
+      <workItem from="1720406266259" duration="2125000" />
+      <workItem from="1720559231581" duration="1815000" />
+    </task>
+    <task id="LOCAL-00001" summary="Current EGFR models and files">
+      <created>1717460910689</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717460910689</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Cleaned up">
+      <created>1717461236181</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717461236181</updated>
+    </task>
+    <task id="LOCAL-00003" summary="README.md">
+      <created>1717464521995</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717464521995</updated>
+    </task>
+    <task id="LOCAL-00004" summary="README.md">
+      <created>1717464578520</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717464578520</updated>
+    </task>
+    <task id="LOCAL-00005" summary="README.md">
+      <created>1717464674671</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717464674671</updated>
+    </task>
+    <task id="LOCAL-00006" summary="README.md">
+      <created>1717464783415</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717464783415</updated>
+    </task>
+    <task id="LOCAL-00007" summary="README.md">
+      <created>1717464827712</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717464827712</updated>
+    </task>
+    <task id="LOCAL-00008" summary="README.md">
+      <created>1717464842170</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717464842170</updated>
+    </task>
+    <task id="LOCAL-00009" summary="README.md">
+      <created>1717464891127</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717464891127</updated>
+    </task>
+    <task id="LOCAL-00010" summary="README.md">
+      <created>1717464925130</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717464925130</updated>
+    </task>
+    <task id="LOCAL-00011" summary="README.md">
+      <created>1717465069456</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717465069456</updated>
+    </task>
+    <task id="LOCAL-00012" summary="README.md">
+      <created>1717465436079</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717465436079</updated>
+    </task>
+    <task id="LOCAL-00013" summary="README.md">
+      <created>1717465654403</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717465654403</updated>
+    </task>
+    <task id="LOCAL-00014" summary="README.md">
+      <created>1717466186470</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717466186470</updated>
+    </task>
+    <task id="LOCAL-00015" summary="README.md">
+      <created>1717535460873</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717535460873</updated>
+    </task>
+    <task id="LOCAL-00016" summary="README.md">
+      <created>1717535639932</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717535639932</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update">
+      <created>1720559991062</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1720559991062</updated>
+    </task>
+    <task id="LOCAL-00018" summary="test">
+      <created>1720560914546</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720560914546</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Current EGFR models and files" />
+    <MESSAGE value="Cleaned up" />
+    <MESSAGE value="README.md" />
+    <MESSAGE value="update" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/EGFR$insert_EGFR_params.coverage" NAME="insert_EGFR_params Coverage Results" MODIFIED="1720450624613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EGFR$convert_modules.coverage" NAME="convert_modules Coverage Results" MODIFIED="1720407693392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EGFR$insert_EGFR_no_Shp_params.coverage" NAME="insert_EGFR_no_Shp_params Coverage Results" MODIFIED="1720450617478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EGFR$run_EGFR_no_Shp.coverage" NAME="run_EGFR_no_Shp Coverage Results" MODIFIED="1720450629525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EGFR$run_EGFR.coverage" NAME="run_EGFR Coverage Results" MODIFIED="1720450636846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

@@ -1,0 +1,8 @@
+2024-07-07 20:01:12,127 pybnf.pybnf     INFO     MainProcess Running PyBNF v1.2.2
+2024-07-07 20:01:12,127 pybnf.pybnf     INFO     MainProcess Loading configuration file: EGFR2_pybionetfit.conf
+2024-07-07 20:01:13,216 pybnf.config    INFO     MainProcess Loaded variables
+2024-07-07 20:01:13,216 pybnf.pybnf     ERROR    MainProcess Terminating due to a PybnfError:
+2024-07-07 20:01:13,216 pybnf.pybnf     ERROR    MainProcess The following variables are declared in the .conf file, but were not found in any model file: {'kp_5'}
+2024-07-07 20:01:13,216 root            INFO     MainProcess No cluster to tear down
+2024-07-07 20:01:13,216 pybnf.pybnf     INFO     MainProcess Fitting unsuccessful.  Attempting cleanup
+2024-07-07 20:01:13,216 pybnf.pybnf     INFO     MainProcess Total fitting time: 0:00:01

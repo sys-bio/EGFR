@@ -21,7 +21,7 @@ param_dict = dict()
 for i, name in enumerate(names):
     param_dict[name] = best[i]
 
-model_name = 'EGFR'
+model_name = 'EGFR_new'
 
 new_model = ''
 with open(model_name + '.ant', 'r') as model:

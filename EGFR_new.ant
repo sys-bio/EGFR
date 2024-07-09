@@ -1,0 +1,295 @@
+// Edited by HSW 6-29-24
+
+// --------------------------------------------------------------------
+
+// Created by libAntimony v2.8.1
+model EGFR_combined()
+
+// Compartments:
+compartment cell, extra, intra;
+
+// --------------------------------------------------------------------
+
+//Species
+
+// EGFR
+species Lig in extra
+species Egfr in cell
+species iEgfr in intra
+species Egfr_Lig in cell
+species iEgfr_Lig in intra
+species pEgfr_Lig in cell
+species ipEgfr_Lig in intra
+
+// Shp2
+species Shp2 in cell
+species pShp2 in cell
+species aR_Shp2 in cell
+species aR_pShp2 in cell
+
+// GAREM
+species Garem in cell
+species Grb2_Garem in cell
+species Grb2_pGarem in cell
+species aR_Grb2_Garem in cell
+species aR_Grb2_pGarem in cell
+species Grb2_pGarem_pShp2 in cell
+
+// GAB
+species Gab1 in cell
+species Grb2_Gab1 in cell
+species Grb2_pGab1 in cell
+species aR_Grb2_Gab1 in cell
+species aR_Grb2_pGab1 in cell
+species Grb2_pGab1_pShp2 in cell
+
+// SHC
+species Shc1 in cell
+species aR_Shc1 in cell
+species aR_pShc1 in cell
+species pShc1 in cell
+
+// SOS
+species SOS1 in cell
+species Grb2_SOS1 in cell
+
+species Act_Grb2_SOS1 in cell
+species Ad1_Grb2_SOS1 in cell
+species Ad1_Grb2_SOS1_pShp2 in cell
+species Ad2_Grb2_SOS1 in cell
+species Ad2_Grb2_SOS1_pShp2 in cell
+species Ad3_Grb2_SOS1 in cell
+species iAct_Grb2_SOS1 in intra
+
+// Other
+species Ras in cell
+species aRas in cell
+species Grb2 in cell
+species Rasa1 in cell
+
+// Total Species
+species pEGFRtot in cell
+species pGAREMtot in cell
+species pGAB1tot in cell
+species pSHC1tot in cell
+species pShp2tot in cell
+
+// --------------------------------------------------------------------
+
+// Reactions:
+
+
+//EGFR
+J1: => Egfr; Vr; //New Receptors
+J2: Egfr => iEgfr; kt * Egfr; //Receptor constitutive internalization
+J3: iEgfr => ; kx * iEgfr; //Internalized receptor Degradation
+J4: Egfr -> Egfr_Lig; kf * Egfr * Lig - kr * Egfr_Lig; //Ligand_binding
+J5: Egfr_Lig => iEgfr_Lig; ke * Egfr_Lig; //Receptor ligand endocytosis
+J6: iEgfr_Lig => ; kh * iEgfr_Lig; //Internalized receptor Complex Degradation
+J7: Egfr_Lig -> pEgfr_Lig; kp1 * Egfr_Lig - k_p1 * pEgfr_Lig; //Receptor Phosphorylation
+J8: pEgfr_Lig => ipEgfr_Lig; ke * pEgfr_Lig; //Phosphorylated Receptor Endocytosis
+J9: ipEgfr_Lig => ; kh * ipEgfr_Lig; //Phosphorylated internalized Receptor Complex Degradation
+
+//Shp2
+J10: pEgfr_Lig + Shp2 -> aR_Shp2; k7 * pEgfr_Lig * Shp2 - k_7 * aR_Shp2; //Binding of Shp2 to the EGFR
+J11: aR_Shp2 => aR_pShp2; kp5 * aR_Shp2; //Shp2 phosphorylation
+J12: aR_pShp2 => pEgfr_Lig + pShp2; k_7a * aR_pShp2; //EGFR-pShp2 dissociation
+J13: pShp2 => Shp2; k_p5 * pShp2 * pShp2; //pShp2 dephosphorylation
+
+//GAREM
+J14: Garem + Grb2 -> Grb2_Garem; k1 * Garem * Grb2 - k_1 * Grb2_Garem; //Grb2_Garem complex formation
+J15: pEgfr_Lig + Grb2_Garem -> aR_Grb2_Garem; k2 * pEgfr_Lig * Grb2_Garem - k_2 * aR_Grb2_Garem; //Grb2_Garem receptor association
+J16: aR_Grb2_Garem => aR_Grb2_pGarem; kp2 * aR_Grb2_Garem; //Grb2_Garem phosphorylation
+J17: aR_Grb2_pGarem => pEgfr_Lig + Grb2_pGarem; k_2a * aR_Grb2_pGarem; //Grb2_pGarem dissociation
+J18: Grb2_pGarem => Grb2_Garem; k_p2 * Grb2_pGarem; //Grb2_pGarem dephosphorylation
+J19: Grb2_pGarem + Grb2_SOS1 -> Ad1_Grb2_SOS1; k3 * Grb2_pGarem * Grb2_SOS1 - k_3 * Ad1_Grb2_SOS1 ; //Grb2_pGarem binding to Grb2_SOS1
+J20: Ad1_Grb2_SOS1 + pShp2 -> Ad1_Grb2_SOS1_pShp2; k11 * Ad1_Grb2_SOS1 * pShp2 - k_11 * Ad1_Grb2_SOS1_pShp2; //Ad1_Grb2_SOS1_pShp2 complex formation
+J21: Ad1_Grb2_SOS1_pShp2 => Act_Grb2_SOS1 + Grb2_pGarem_pShp2; k12 * Ad1_Grb2_SOS1_pShp2; //Activation of Grb2-SOS complex
+J22: Grb2_pGarem_pShp2 => Grb2_pGarem + pShp2; k13 * Grb2_pGarem_pShp2; //Dissociation of Grb2_pGarem_pShp complex
+
+//GAB
+J23: Gab1 + Grb2 -> Grb2_Gab1; k4 * Gab1 * Grb2 - k_4 * Grb2_Gab1; //Grb2_Gab1 complex formation
+J24: pEgfr_Lig + Grb2_Gab1 -> aR_Grb2_Gab1; k5 * pEgfr_Lig * Grb2_Gab1 - k_5 * aR_Grb2_Gab1; //Grb2_Gab1 receptor association
+J25: aR_Grb2_Gab1 => aR_Grb2_pGab1; kp3 * aR_Grb2_Gab1; //Grb2_Gab1 phosphorylation
+J26: aR_Grb2_pGab1 => pEgfr_Lig + Grb2_pGab1; k_5a * aR_Grb2_pGab1; //Grb2_pGab1 dissociation
+J27: Grb2_pGab1 => Grb2_Gab1; k_p3 * Grb2_pGab1; //Grb2_pGab1 dephosphorylation
+J28: Grb2_pGab1 + Grb2_SOS1 -> Ad2_Grb2_SOS1; k9 * Grb2_pGab1 * Grb2_SOS1 - k_9 * Ad2_Grb2_SOS1 ; //Grb2_pGab1 binding to Grb2_SOS1
+J29: Ad2_Grb2_SOS1 + pShp2 -> Ad2_Grb2_SOS1_pShp2; k14 * Ad2_Grb2_SOS1 * pShp2 - k_14 * Ad2_Grb2_SOS1_pShp2; //Ad2_Grb2_SOS1_pShp2 complex formation
+J30: Ad2_Grb2_SOS1_pShp2 => Act_Grb2_SOS1 + Grb2_pGab1_pShp2; k15 * Ad2_Grb2_SOS1_pShp2; //Activation of Grb2-SOS complex
+J31: Grb2_pGab1_pShp2 => Grb2_pGab1 + pShp2; k16 * Grb2_pGab1_pShp2; //Dissociation of Grb2_pGab1_pShp complex
+
+//SHC
+J32: pEgfr_Lig + Shc1 -> aR_Shc1; k6 * pEgfr_Lig * Shc1 - k_6 * aR_Shc1; //SHC1 activated EGFR association
+J33: aR_Shc1 => aR_pShc1; kp4 * aR_Shc1 ; //SHC1 phosphorylation
+J34: aR_pShc1 => pEgfr_Lig + pShc1; k_6a * aR_pShc1; //pSHC1 dissociation
+J35: pShc1 => Shc1; k_p4 * pShc1; //pSHC1 dephosphorylation
+J36: pShc1 + Grb2_SOS1 -> Ad3_Grb2_SOS1; k10 * pShc1 * Grb2_SOS1 - k_10 * Ad3_Grb2_SOS1; //Grb2_SOS1 Shc1 binding
+J37: Ad3_Grb2_SOS1 => pShc1 + Act_Grb2_SOS1; k19 * Ad3_Grb2_SOS1; //Grb2_SOS1 activation
+
+//SOS
+J38: Grb2 + SOS1 -> Grb2_SOS1; k8 * Grb2 * SOS1 - k_8 * Grb2_SOS1; //Grb2_SOS1 binding
+J39: Act_Grb2_SOS1 => iAct_Grb2_SOS1; ke * Act_Grb2_SOS1; //Inhibition by endocytosis
+J40: iAct_Grb2_SOS1 => Grb2_SOS1; kr * iAct_Grb2_SOS1; //Recycling of the internalized complexes
+
+//RAS
+J41: Act_Grb2_SOS1 + Ras => Act_Grb2_SOS1 + aRas; k17 * Act_Grb2_SOS1 * Ras; //Activation by Grb2_SOS1
+J42: aRas + Rasa1 => Ras + Rasa1; k18 * aRas * Rasa1; //Deactivation of Ras1
+
+// Reporter species
+pEGFRtot := pEgfr_Lig + ipEgfr_Lig + aR_Grb2_Garem + aR_Grb2_pGarem + aR_Grb2_Gab1 + aR_Grb2_pGab1 + aR_Shp2 + aR_pShp2 + aR_Shc1 + aR_pShc1
+pShp2tot := aR_pShp2 + pShp2 + Ad1_Grb2_SOS1_pShp2 + Grb2_pGarem_pShp2 + Ad2_Grb2_SOS1_pShp2 + Grb2_pGab1_pShp2
+pGAREMtot := aR_Grb2_pGarem + Grb2_pGarem + Grb2_pGarem_pShp2 + Ad1_Grb2_SOS1 + Ad1_Grb2_SOS1_pShp2
+pGAB1tot := aR_Grb2_pGab1 + Grb2_pGab1 + Grb2_pGab1_pShp2 + Ad2_Grb2_SOS1 + Ad2_Grb2_SOS1_pShp2
+pSHC1tot := aR_pShc1 + pShc1 + Ad3_Grb2_SOS1
+total_SOS := SOS1 + Grb2_SOS1 + Ad1_Grb2_SOS1 + Ad2_Grb2_SOS1 + Ad3_Grb2_SOS1 + Act_Grb2_SOS1 + iAct_Grb2_SOS1
+
+// --------------------------------------------------------------------
+
+// Initial Values:
+
+
+// all species has nM units
+
+// EGFR
+
+// fix Lig
+var Lig = 0.165;
+Lig has nM;
+Egfr = 135;
+iEgfr = .17;
+Egfr_Lig = 0.2;
+iEgfr_Lig = 0;
+pEgfr_Lig = 0.02;
+ipEgfr_Lig = 0.0;
+
+// Shp2
+Shp2 = 27.5;
+pShp2 = 0.045;
+aR_Shp2 = 0.05;
+aR_pShp2 = 0.002;
+
+// GAREM
+Garem = 1.7
+Grb2_Garem = 2.2
+Grb2_pGarem = 0.02
+aR_Grb2_Garem = 0.0163
+aR_Grb2_pGarem = 0.007
+Grb2_pGarem_pShp2 = 0.0
+
+/// GAB
+Gab1 = 2.1
+Grb2_Gab1 = 2.8
+aR_Grb2_Gab1 = 0.03
+aR_Grb2_pGab1 = 0.002
+Grb2_pGab1_pShp2 = 0.0
+Grb2_pGab1 = 0.0
+
+// SHC
+Shc1 = 27.3
+aR_Shc1 = 0.053
+aR_pShc1 = 0.02
+pShc1 = 0.02
+
+// SOS
+SOS1 = 0.13
+Grb2_SOS1 = 3.2
+Act_Grb2_SOS1 = 0.22
+Ad1_Grb2_SOS1 = 0.003
+Ad1_Grb2_SOS1_pShp2 = 0.002
+Ad2_Grb2_SOS1 = 0.0
+Ad2_Grb2_SOS1_pShp2 = 0.0
+Ad3_Grb2_SOS1 = 0.002
+iAct_Grb2_SOS1 = 0.12
+
+// Other
+Ras = 95.2
+aRas = 3.8
+Grb2 = 39
+Rasa1 = 98.0
+
+
+// --------------------------------------------------------------------
+
+// Compartment initializations:
+
+cell = 1;
+extra = 5000;
+intra = 1;
+
+// --------------------------------------------------------------------
+
+// Parameters:
+
+Vr = 0.176; // Rate of new EGFR appearing at cell surface
+kt = 0.0013; // Turnover rate constant for empty EGFR
+kx = 1.00E+00; // Internalized empty receptor degradation rate constant
+kf = 1.59E-02; // Forward rate constant for Lig-EGFR binding
+kr = 6.85E-03; // Reverse rate constant for Lig-EGFR dissociation
+ke = 3.70E-03; // Endocytic rate constant for Lig-EGFR
+kh = 5.60E-04; // Degradation rate constant for internalized Lig-EGFR
+kp1 = 0.0036754703844496 // Phosphorylation rate constant for active EGFR
+k_p1 = 7.00E-02; // Dephosphorylation rate constant for PY EGFR
+kp2 = 0.0213016046145457 // Phosphorylation rate constant for EGFR substrate Garem
+k_p2 = 0.02; // Dephosphorylation rate constant for PY Garem
+kp3 = 0.0167830606311226 // Phosphorylation rate constant for EGFR substrate Gab1
+k_p3 = 7.20E-03; // Dephosphorylation rate constant for PY Gab1
+kp4 = 0.0175635083621601 // Phosphorylation rate constant for EGFR substrate Shc1
+k_p4 = 0.09; // Dephosphorylation rate constant for PY Shc1
+kp5 = 0.0329509197636109 // Phosphorylation rate constant for EGFR substrate PTPN11
+k_p5 = 0.0501497262615343 // Dephosphorylation rate constant for PY PTPN11
+k1 = 0.0005; // Forward rate constant for Garem-Grb2 binding
+k_1 = 0.016; // Reverse rate constant for Garem-Grb2 dissociation
+k2 = 1.5962465446023348 // Forward rate constant for Garem-Grb2 binding to phosphorylated EGFR
+k_2 = 0.93 // Reverse rate constant for Garem-Grb2 dissociating from phosphorylated EGFR
+k_2a = 0.2185172545735032 // Reverse rate constant for pGarem-Grb2 dissociating from phosphorylated EGFR
+k3 = 0.02 // Forward rate constant for Shp2 binding to doubly phosphorylated Garem or Gab1
+k_3 = 0.1315661494187105 // Reverse rate constant for Shp2 dissociating from doubly phosphorylated Garem or Gab1
+k4 = 0.001; // Forward rate constant for Gab1-Grb2 binding
+k_4 = 0.03; // Reverse rate constant for Gab1-Grb2 dissociation
+k5 = 3.0273218548383256 // Forward rate constant for Gab1-Grb2 binding to phosphorylated EGFR
+k_5 = 1.46; // Reverse rate constant for Gab1-Grb2 dissociating from phosphorylated EGFR
+k_5a = 0.3082904297530458 // Reverse rate constant for pGab1-Grb2 dissociating from phosphorylated EGFR
+k6 = 0.448144990194955 // Forward rate constant for Shc1 binding to phosphorylated EGFR
+k_6 = 1.07; // Reverse rate constant for Shc1 dissociating from phosphorylated EGFR
+k_6a = 0.0680073840720013 // Reverse rate constant for Shc1 dissociating from phosphorylated EGFR
+k7 = 0.11; // Forward rate constant for EGFR-Shp2 binding
+k_7 = 1.07; // Reverse rate constant for EGFR-Shp2 dissociation
+k_7a = 0.1; // Reverse rate constant for EGFR-pShp2 dissociation
+k8 = 9.00E-05; // Forward rate constant for Grb2 - SOS1 binding
+k_8 = 1.40E-04; // Reverse rate constant for Grb2_SOS1 dissociation
+k9 = 0.02 // Forward rate constant for Grb2_pGab1 binding to Grb2_SOS1
+k_9 = 0.12616973960578 // Reverse rate constant for Grb2_pGab1 binding to Grb2_SOS1
+k10 = 0.0053697430265642 // Forward rate constant for Grb2_SOS1 Shc1 binding
+k_10 = 1.6836841144126962 // Reverse rate constant for Grb2_SOS1 Shc1 binding
+k11 = 0.3958756591726172 // Forward rate constant for Ad1_Grb2_SOS1_pShp2 complex formation
+k_11 = 0.0288045170693844 // Reverse rate constant for Ad1_Grb2_SOS1_pShp2 complex formation
+k12 = 1.457093857914576 // Activation of pGarem-Grb2-SOS complex
+k13 = 1.8454979883024896 // Dissociation of Grb2_pGarem_pShp complex
+k14 = 0.3996376488465046 // Forward rate constant for Ad2_Grb2_SOS1_pShp2 complex formation
+k_14 = 0.0369957387829105 // Reverse rate constant for Ad2_Grb2_SOS1_pShp2 complex formation
+k15 = 3.067177170766459 // Activation of pGab1-Grb2-SOS complex
+k16 = 1.432921857226905 // Dissociation of Grb2_pGab1_pShp complex
+k17 = 0.5379270027733427 // Activation of Ras by SOS-adaptor complexes
+k18 = 0.0569369151989122 // Deactivation rate constant of active Ras by RASA1
+k19 = 0.3517930515482942 // Activation of pShc1-Grb2-SOS complex
+kr1 = 0.01 // Recycling of the internalized Grb2-SOS complexes
+
+// --------------------------------------------------------------------
+
+// Unit definitions:
+unit substance = 1e-9 mole;
+unit time_unit = second;
+unit nM = 1e-9 mole / litre;
+unit per_nM = litre / 1e-9 mole;
+unit per_sec = 1 / second;
+unit nM_per_s = 1e-9 mole / (litre * second);
+unit per_nMs = litre / (1e-9 mole * second);
+
+// Display Names:
+substance is "nmole";
+time_unit is "s";
+per_sec is "s-1";
+nM_per_s is "nM/s";
+per_nMs is "nM-1 s-1";
+extra is "extracellular space";
+end
